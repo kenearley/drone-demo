@@ -14,11 +14,3 @@ steps:
   commands:
   - yarn install
   - yarn lint
-
-- name: complete
-  image: node
-  commands:
-  - echo "DONE!"
-  depends_on:
-  - tests
-  - lint
