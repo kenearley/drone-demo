@@ -1,25 +1,23 @@
 kind: pipeline
 type: docker
-name: default
+name: tests
 
 steps:
-- name: tests
+- name: jest
   image: node
   commands:
   - yarn install
   - yarn test
 
-- name: lint
+---
+
+kind: pipeline
+type: docker
+name: lint
+
+steps:
+- name: eslint
   image: node
   commands:
   - yarn install
   - yarn lint
-
-- name: complete
-  image: node
-  commands:
-  - echo done
-  - echo world
-  depends_on:
-  - tests
-  - lint
