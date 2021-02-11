@@ -4,19 +4,19 @@ name: default
 
 steps:
 - name: tests
-  image: alpine
+  image: node
   commands:
   - yarn install
   - yarn test
 
 - name: lint
-  image: alpine
+  image: node
   commands:
   - yarn install
   - yarn lint
 
 - name: complete
-  image: alpine
+  image: node
   commands:
   - echo done
   - echo world
