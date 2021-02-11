@@ -1,8 +1,9 @@
 kind: pipeline
 type: docker
-name: en
+name: tests
 
-- name: tests
+steps:
+- name: jest
   image: node
   commands:
   - yarn install
@@ -12,10 +13,10 @@ name: en
 
 kind: pipeline
 type: docker
-name: fr
+name: lint
 
 steps:
-- name: lint
+- name: eslint
   image: node
   commands:
   - yarn install
