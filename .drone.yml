@@ -18,7 +18,7 @@ steps:
 - name: complete
   image: node
   commands:
-  - echo I am done!
+  - echo "DONE!"
   depends_on:
   - tests
   - lint
