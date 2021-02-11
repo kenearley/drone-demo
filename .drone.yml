@@ -3,8 +3,11 @@ type: docker
 name: default
 
 steps:
-- name: greeting
-  image: alpine
+- name: tests
+  image: node
   commands:
-  - echo hello
-  - echo world
+  - yarn test
+- name: lint
+  image: node
+  commands:
+  - yarn lint
