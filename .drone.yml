@@ -6,8 +6,11 @@ steps:
 - name: tests
   image: node
   commands:
+  - yarn
   - yarn test
 - name: lint
   image: node
   commands:
+  - yarn
   - yarn lint
+
