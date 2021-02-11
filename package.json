@@ -1,0 +1,7 @@
+{
+  "name": "drone-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ken Earley <ken@mjg.in>",
+  "license": "MIT"
+}
