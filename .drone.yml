@@ -4,15 +4,15 @@ name: default
 
 steps:
 - name: tests
-  image: node
+  image: alpine
   commands:
-  - yarn
+  - yarn install
   - yarn test
 
 - name: lint
-  image: node
+  image: alpine
   commands:
-  - yarn
+  - yarn install
   - yarn lint
 
 - name: complete
