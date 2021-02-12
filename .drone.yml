@@ -1,6 +1,6 @@
 kind: pipeline
 type: docker
-name: go
+name: go-tests
 
 steps:
 - name: tests
@@ -10,9 +10,10 @@ steps:
   - go test -v ./...
 
 ---
+
 kind: pipeline
 type: docker
-name: tests
+name: js-unit-tests
 
 steps:
 - name: jest
@@ -25,7 +26,7 @@ steps:
 
 kind: pipeline
 type: docker
-name: lint
+name: js-lint
 
 steps:
 - name: eslint
