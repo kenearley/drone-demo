@@ -8,9 +8,9 @@ steps:
   commands:
   - go install .
   - go test -v ./...
-  when:
-    event:
-      - pull_request
+trigger:
+  event:
+    - pull_request
 
 ---
 
@@ -24,9 +24,9 @@ steps:
   commands:
   - yarn install
   - yarn test -t='^(?!.*?@slow)' --silent
-  when:
-    event:
-      - pull_request
+trigger:
+  event:
+    - pull_request
 
 ---
 
@@ -40,9 +40,9 @@ steps:
   commands:
   - yarn install
   - yarn test -t='@slow' --silent
-  when:
-    event:
-      - pull_request
+trigger:
+  event:
+    - pull_request
 
 ---
 
@@ -56,6 +56,6 @@ steps:
   commands:
   - yarn install
   - yarn lint
-  when:
-    event:
-      - pull_request
+trigger:
+  event:
+    - pull_request
