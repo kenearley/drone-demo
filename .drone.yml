@@ -1,5 +1,17 @@
 kind: pipeline
 type: docker
+name: go
+
+steps:
+- name: tests
+  image: golang
+  commands:
+  - go install .
+  - go test -v ./...
+
+---
+kind: pipeline
+type: docker
 name: tests
 
 steps:
