@@ -1,4 +1,4 @@
-import { sum } from "./sum";
+import { sum, slowSum } from "./sum";
 
 test("adds 1 + 2 to equal 3", () => {
   expect(sum(1, 2)).toBe(3);
@@ -14,6 +14,6 @@ test("adds 1 + -2 to equal -1", () => {
 
 describe("slow test @slow", () => {
   test("adds 5 + 4 to equal 9 (slowly)", () => {
-    setTimeout(() => expect(sum(5, 4).toBe(9)), 10000);
+    expect(slowSum(5, 4)).toBe(9);
   });
 });
