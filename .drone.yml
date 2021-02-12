@@ -20,7 +20,20 @@ steps:
   image: node
   commands:
   - yarn install
-  - yarn test
+  - yarn test -t='^(?!.*?@slow)'
+
+---
+
+kind: pipeline
+type: docker
+name: js-slow-unit-tests
+
+steps:
+- name: jest
+  image: node
+  commands:
+  - yarn install
+  - yarn test -t='@slow'
 
 ---
 
